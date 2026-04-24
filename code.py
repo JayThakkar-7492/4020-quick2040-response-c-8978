@@ -8,4 +8,5 @@ img=qrcode.make(a)
 
 #output
 img.show()
-
+#save
+img.save("pib.png")
