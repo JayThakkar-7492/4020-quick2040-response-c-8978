@@ -7,5 +7,5 @@ a="https://www.pib.gov.in/indexd.aspx?reg=3&lang=2"
 img=qrcode.make(a)
 
 #output
-print(img)
+img.show()
 
