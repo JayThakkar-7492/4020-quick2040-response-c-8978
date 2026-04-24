@@ -1,12 +1,16 @@
 import qrcode
-#Variable assigning
+import streamlit as st
+from PIL import Image
 
-a="https://www.pib.gov.in/indexd.aspx?reg=3&lang=2"
+# Title for your web app
+st.title("QR Code Generator")
 
-#process of making QR Code
-img=qrcode.make(a)
+# Variable assigning
+url = "https://www.pib.gov.in/indexd.aspx?reg=3&lang=2"
 
-#output
-img.show()
-#save
-img.save("pib.png")
+# Process of making QR Code
+img = qrcode.make(url)
+
+# Output: Displaying on Streamlit
+# We use st.image to render the PIL object directly
+st.image(img, caption="Scan this to visit PIB News", use_container_width=True)
